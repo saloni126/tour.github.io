@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+   
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h2>Search Menu</h2>
+<p>Start to type the search options.</p>
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="https://www.google.com/search?q=delhi&sxsrf=ALeKk02Dg_6zyWWEIvsHnDukgt0jfgLhHQ:1600263443905&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjD0Pvw5e3rAhUHIbcAHd48CYIQ_AUoA3oECB8QBQ">DELHI</a></li>
+      <li><a href="https://www.google.com/search?q=mumbai&sxsrf=ALeKk03KeawVTAAdHk1UAvlaq0to5SzMvw:1600264125141&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjM6-a16O3rAhVI7HMBHcu1B2oQ_AUoA3oECB0QBQ&biw=1366&bih=663#imgrc=Fur6ja_ZqMXqeM">MUMBAI</a></li>
+      <li><a href="https://www.google.com/search?q=goa&sxsrf=ALeKk03MVQsW0lkRRIlKRGjlRcqFohzZsA:1600264207736&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjr_5fd6O3rAhUv6nMBHXKOD6sQ_AUoA3oECB4QBQ">GOA</a></li>
+      <li><a href="https://www.google.com/search?q=gujarat&sxsrf=ALeKk03vXt-mX5XL-KRJ9eZ0aD9k5QVW8g:1600264238554&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiIgvHr6O3rAhWjmOYKHfeXBZsQ_AUoA3oECBwQBQ">GUJRAT</a></li>
+      <li><a href="https://www.google.com/search?q=manali&sxsrf=ALeKk00wOV4oI0rpJKfYDiAOzOjX7_7Gtw:1600264271981&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi9pun76O3rAhV6H7cAHdASAzwQ_AUoAnoECBwQBA">MANALI</a></li>
+      <li><a href="https://www.google.com/search?q=rajasthan&sxsrf=ALeKk01P7NyClmNFzFtMvzW4qKYV4nYkUw:1600264303750&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiHofyK6e3rAhUL6XMBHd0LDrUQ_AUoA3oECBwQBQ">RAJASTHAN</a></li>
+      <li><a href="https://www.google.com/search?q=agra&sxsrf=ALeKk00hjybSnLQAubHp0RHC-W-qBZU2Nw:1600264338732&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi4odOb6e3rAhUy73MBHbN6ARwQ_AUoA3oECCAQBQ">AGRA</a></li>
+      <li><a href="https://www.google.com/search?q=ladakh&sxsrf=ALeKk01lAbDHJpyNNu7Jk75EnU63JRdwRw:1600264382204&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjO5bCw6e3rAhXVH7cAHR-OCdgQ_AUoA3oECBwQBQ">LADAKH</a></li>
+      <li><a href="https://www.google.com/search?q=gaya&sxsrf=ALeKk00zebe6aZrCl3Seut9hr-TmAmgAog:1600264428882&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjC69HG6e3rAhUv6nMBHXKOD6sQ_AUoA3oECCAQBQ">GAYA</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Search Menu</h2>
+    <p>Find your destination search your favourite palce all over the india.</p>
+    <p>Travel and know more about india .</p>
+    <p>You will fall in love with india, indian culture and traditions.</p>
+    
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+

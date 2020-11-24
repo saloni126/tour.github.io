@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+ 
+ 
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img {
+    height: 375px;
+}
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border: 8px solid seagreen;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:#3399bb;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+  border: 2px solid black;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: rgb(80, 161, 60);
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us </h1>
+  <h2> **This is our first minor project implenting on "VISITING WEBSITE"</h2>
+  
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="infoimages/saloni.jpg" alt="sallo" style="width:100%">
+      <div class="container">
+        <h2>SALONI SINGH</h2>
+        <h4 class="title">TEAM MEMBER-1</h4>
+        <p>17/ICS/111</p>
+        <p>A-36 shatabdi nagar quarsi road, Aligarh</p>
+        <p>salonisingh2701@gmail.com</p>
+        <p><button class="button">CONTACT</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="infoimages/rashmi.jpg" alt="rashu" style="width:100%">
+      <div class="container">
+        <h2>RASHMI SINGH</h2>
+        <h4 class="title">TEAM MEMBER-2</h4>
+        <p>17/ICS/072</p>
+        <p> village sakka dankaur, greater noida </p>
+        <p>rashmisingh6520@gmail.com</p>
+        <p><button class="button">CONTACT</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="infoimages/pratima.jpg" alt="paro" style="width:100%">
+      <div class="container">
+        <h2>PRATIMA SINGH</h2>
+        <h4 class="title">TEAM MEMBER-3</h4>
+        <p>17/ICS/119</p>
+        <p>Sarsawan arjunganj sultanpur road, Lucknow</p>
+        <p>singhpratima1999pq@gmail.com</p>
+        <p><button class="button">CONTACT</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="infoimages/sangeeta.jpg" alt="sangii" style="width:100%">
+      <div class="container">
+        <h2>SANGEETA</h2>
+        <h4 class="title">TEAM MEMBER-4</h4>
+        <p>17/ICS/115</p>
+        <p> jewar, greater noida</p>
+        <p>123sangii@gmail.com</p>
+        <p><button class="button">CONTACT</button></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

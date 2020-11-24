@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"mont-serrat",sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background:#f1f1f1;
+    height: 100vh; width:100%;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url('../images/1828844.jpg') no-repeat ;
+    background-size: cover;
+}
+.contact-info{
+    display:"flex";
+    width:100%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    padding:0 30px;
+    flex-direction: column;
+}
+.card{
+    background:black;
+    padding:10px 20px;
+    margin:10px 100px;
+    width:calc(33% -20px);
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    cursor: pointer;
+    opacity:70%;
+}
+.card-icon{
+    font-size:28px;
+    background:#ff6348;
+    width:60px;
+    text-align: center;
+    line-height: 60px important ;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    opacity: 100%;
+}
+.card:hover .card-icon{
+    background:none;
+    color:#ff6348;
+    width: 60px;
+    height:60px;
+    text-align:center;
+    line-height:60px important;
+    border-radius:50%;
+    transition:0.3s linear; 
+}
+.card:hover .card-icon{
+    background:none;
+    color:#ff6348;
+    transform: scale(1.6);
+
+}
+.card p{
+    margin-top:20px;
+    font-weight:300;
+    letter-spacing: 2px;
+    max-height:0;
+    opacity:0;
+    transition: 0.3s linear;
+}
+.card:hover p{
+    max-height:40px;
+    opacity:100%;
+
+}
+@media screen and (max-width:800px){
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width:100%;
+        max-width:300px;
+        margin:100px 0;
+    }
+}
